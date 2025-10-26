@@ -66,12 +66,6 @@ python adsb_analyzer_ML.py
 - On **macOS/Linux** the `rtl-sdr` library (librtlsdr) is used to access I/Q samples; this library supports reception only for this device.
 - We do **not** install or use transmit-capable drivers/software (e.g., no HackRF tools, no bladeRF host programs, no `soapy` transmit modules).
 
-### Evidence / reproducibility
-Included in the repository:
-- `screenshots/` — screenshots of `dump1090` output showing "Found 1 device" and decoded ADS-B messages.
-- `config/` — copy of `dump1090` configuration used (receive-only settings).
-- `logs/` — sample decode logs (SBS format) produced by `dump1090` and the Python logger.
-
 ### Legal & safety reminder
 - Regulations differ by country. This repository documents passive reception only. If you intend to *transmit*, check and obtain the required licenses/permits from your national communications regulator before doing so.
 - For questions on local law, contact your national authority (e.g., FCC in the USA, Ofcom in the UK, EETT/RAE in Greece).
