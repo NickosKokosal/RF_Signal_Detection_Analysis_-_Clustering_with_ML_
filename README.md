@@ -43,6 +43,10 @@ A 25€ TV tuner becomes an SDR receiver for RF signals (24 MHz – 1.7 GHz) whi
 4) NOAA weather satellites (~137 MHz)
 5) GPS L1 (1.575 GHz)
 even RF noise/interference with FFT/Waterfall
+While the receiver can tune to 1.575 GHz, GPS signals are extremely weak (below the noise floor). 
+To "locate" or decode GPS, a simple TV tuner antenna is not enough. 
+You usually need an Active Patch Antenna (with an LNA amplifier) to see the signal.
+
 
 USAGE from terminal:
 1) Start dump1090 server
