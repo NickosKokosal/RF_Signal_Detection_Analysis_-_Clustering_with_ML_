@@ -9,7 +9,7 @@ The device which been used is the "RTL2832U TV Tuner for Laptop /
 PC with DVB-T Terrestrial Receiver and USB-A connection".
 | Chip                                        | Role                                                 |
 | ------------------------------------------- | ---------------------------------------------------- |
-| RTL2832U                                    | digital interface (USB → PC) & baseband processor    | 
+| RTL2832U                                    | digital interface (USB => PC) & baseband processor    | 
 | Tuner chip (usually R820T / R820T2)         | adjusts the reception frequency (24 MHz – 1766 MHz)  |
 
 The R820T2 is acting like the RF tuner:
@@ -30,9 +30,10 @@ For the macOS / Linux:
 
 How it became an "RF receiver"?
 
-With this process, the tuner no longer searches for TV channels and in parallel is open to any RF frequency within its spectrum (e.g. 24 MHz – 1766 MHz).
+With this process, the tuner no longer searches for TV channels and in parallel 
+is open to any RF frequency within its spectrum (e.g. 24 MHz – 1766 MHz).
 After this dump1090 takes the raw RF samples Decodes the Mode-S / ADS-B packets (1090 MHz)
-and sends the decoded data (ICAO, altitude, lat/lon, speed, etc.) to port 30003 → where your Python logger is connected.
+and sends the decoded data (ICAO, altitude, lat/lon, speed, etc.) to port 30003 => where your Python logger is connected.
 
 What does it mean in practice?
 A 25€ TV tuner becomes an SDR receiver for RF signals (24 MHz – 1.7 GHz) which is Able to detect:
@@ -45,7 +46,7 @@ even RF noise/interference with FFT/Waterfall
 
 USAGE from terminal:
 1) Start dump1090 server
-dump1090 --interactive --net
+dump1090 interactive net
 2) Run the logger
 python adsb_logger_enhanced.py
 3) Analyze saved data
